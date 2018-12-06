@@ -1,0 +1,43 @@
+Create a Fizz buzz game with upto 100 occourances.
+every 3 & 5th occourance print FizzBuzz
+every 3rd occourance print Fizz
+every 5th occourance print Buzz
+
+**************************************************
+          solution
+          
+**************************************************          
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <meta name="description" content="Roughly 155 characters">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+  </head>
+  <body>
+
+    <h1>Test<h1>
+
+	<script>
+
+	for (var i = 0; i < 100; i++){
+
+		if ((i%5 == 0) && (i%3 == 0)){
+		document.write("FizzBuzz" + "<br>")
+		}
+		else if (i%5 == 0){
+		document.write("Buzz" + "<br>");	
+		}
+		else if (i%3 == 0){
+		document.write("Fizz" + "<br>");;	
+		}
+		
+  }
+
+	</script>
+  </body>
+</html>
