@@ -1,0 +1,14 @@
+//In this challenge you'll be building a StoryMaker program.
+//It's like the popular kids activity called Mad Libs.
+//You'll ask for various types of words like an adjective to describe something,
+
+
+alert("Lets play Mad Lips");
+var name = prompt("Give your first name");
+var verb = prompt("Give me a verb word");
+var noun = prompt("Give me a noun word");
+var message = name + " is increasbally ";
+alert("Thank you for filling in the story");
+message += verb + " person who really enjoys ";
+message += noun + " more than life.";
+document.write(message);
