@@ -1,0 +1,23 @@
+/Using Workspaces, create a Random Number Generator!
+
+//See if you can build a program that collects a number from a user, then prints out a random number from 1 to the number the user selects. Now is the opportunity to practice using some of the commands you learned in this course.
+
+//get user information
+
+var min = prompt("Please input a low number");
+var max = prompt("Please input a high number");
+
+//generate a number from 1 to the random number
+
+var userLowNumberInt = parseInt(min);
+var userMaxNumberInt = parseInt(max);
+
+// Generate a value to do number inbetween 2 user values
+
+var value = userMaxNumberInt - userLowNumberInt + 1;
+var randomNumber = Math.floor(Math.random() * value) + userLowNumberInt;
+
+// print out the number
+
+var message = "<h3>" + "Your random number is " + randomNumber + "</h3>";
+document.write(message);
