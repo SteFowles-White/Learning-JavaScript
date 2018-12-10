@@ -1,23 +1,38 @@
 /Using Workspaces, create a Random Number Generator!
 
-//See if you can build a program that collects a number from a user, then prints out a random number from 1 to the number the user selects. Now is the opportunity to practice using some of the commands you learned in this course.
+//See if you can build a program that collects a number from a user, then prints out a random number from 1 to the 
+//number the user selects. Then allow the use to try again after given the user a clue to what the number is 
 
-//get user information
+//E.g the number is higher than your guess
 
-var min = prompt("Please input a low number");
-var max = prompt("Please input a high number");
 
-//generate a number from 1 to the random number
 
-var userLowNumberInt = parseInt(min);
-var userMaxNumberInt = parseInt(max);
 
-// Generate a value to do number inbetween 2 user values
-
-var value = userMaxNumberInt - userLowNumberInt + 1;
-var randomNumber = Math.floor(Math.random() * value) + userLowNumberInt;
-
-// print out the number
-
-var message = "<h3>" + "Your random number is " + randomNumber + "</h3>";
-document.write(message);
+var correctGuess = false;
+var randomNumber = Math.floor(Math.random() * 6 ) + 1;
+var guess = prompt('I am thinking of a number between 1 and 6. What is it?');
+if (parseInt(guess) === randomNumber ) {
+  correctGuess = true;
+} 
+else if (parseInt(guess) < randomNumber)
+{
+  var guessMore = prompt("Try again. The number I am thinking of is more than " + guess);
+}
+         if (parseInt(guessMore) === randomNumber)
+          {
+          correctGuess = true;
+          }
+  else if (parseInt(guess) > randomNumber){
+   var guessMore = prompt("try again. The number I am thinking of is less than " + guess); 
+  }
+          if (parseInt(guessMore) === randomNumber)
+          {
+          correctGuess = true;
+          }
+  
+if ( correctGuess ) {
+    document.write('<p>You guessed the number!</p>');
+} else {
+  
+    document.write('<p>Sorry. The number was ' + randomNumber + '.</p>');
+}
