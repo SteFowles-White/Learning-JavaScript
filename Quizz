@@ -45,12 +45,12 @@ if (correctAnswers === 5){
   document.write("<p>You did really well, you got them all right !!!!</p>");
   document.write("<p>Your rank is Gold crown</p>");
 }
-else if (correctAnswers === 4 || correctAnswers === 3){
+else if (correctAnswers >= 3){
   document.write("<p>You did really well, you got" + correctAnswers + " !!!!</p>");
   document.write("<p>Your rank is silver crown</p>");
 }
   
- else if (correctAnswers === 1 || correctAnswers === 2) {
+ else if (correctAnswers >= 1) {
     document.write("<p>You did well, you got" + correctAnswers + " !!!!</p>");
     document.write("<p>Your rank is bronze crown</p>");
  }
