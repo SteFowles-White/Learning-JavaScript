@@ -1,0 +1,32 @@
+var html = '';
+
+var rgbColor;
+
+ 
+
+// 1. develop a function to randomly allocate colors and returns the rgbColor
+
+ 
+
+function randomNumber () {
+
+  var color = Math.floor(Math.random() * 256 );
+
+  return color;
+
+}
+ 
+
+//2. create a for or while loop to reapeat the print of the html variable and create a div
+
+ 
+
+for ( var i = 0; i < 10; i++)
+
+{
+
+  rgbColor = 'rgb(' + randomNumber() + ',' + randomNumber() + ',' + randomNumber() + ')';
+
+  html += '<div style="background-color:' + rgbColor + '"></div>'; 
+
+}
