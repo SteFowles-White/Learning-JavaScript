@@ -1,0 +1,62 @@
+// The program should ask a series of questions
+//Then evaluate each answer
+//the program should keep track of the number of questions answered correctly
+// after the questions are ask it should print the questions and the answers and show the number of questions answer correctly and incorrectly 
+
+
+function print(message) {
+  document.get(message);
+}
+
+// This function runs the questions in the queationAndAnswers array and store the users anser in the answer array
+function storeAnswers () {
+  
+  for(var i = 0; i < 4; i++)
+  {
+    var answ = prompt(questionsAndAnswers[i][0]);
+    answers.push(answ);
+  }
+}
+
+
+
+//The questions and answer
+var questionsAndAnswers = [
+                ['What is the Capital of the UK: ', 'london'],
+                ['What is the 9 * 9: ', '81'],
+                ['What is the "Java" + "Script" come out as ?: ', 'javascript'],
+                ['What is the best Console: ', 'switch']
+]
+//store the answers
+var answers = []
+
+
+// ask the questions
+//store answer
+
+storeAnswers();
+
+//print the correct answer section
+
+print('<h2> The Questions you got right are: </h2>');
+
+//first evaluate if they are right and print to screen
+for (var i = 0; i < questionsAndAnswers.length; i++) {
+
+if (answers[i].toLowerCase() === questionsAndAnswers[i][1].toLowerCase()){
+  print(questionsAndAnswers[i][0] + ' ' + questionsAndAnswers[i][1] + '<br>'); 
+  }
+}
+
+
+//then evaluate if they are wrong
+
+
+print('<h2> The Questions you got wrong are: </h2>');
+//first evaluate if they are right
+for (var i = 0; i < questionsAndAnswers.length; i++) {
+
+if (answers[i].toLowerCase() !== questionsAndAnswers[i][1].toLowerCase()){
+  print(questionsAndAnswers[i][0] + ' ' + questionsAndAnswers[i][1] + '<br>'); 
+  }
+}
