@@ -1,0 +1,40 @@
+var message = '';
+var answer;
+
+
+function print(message) {
+  var outputDiv = document.getElementById('output');
+  outputDiv.innerHTML = message;
+}
+
+answer= prompt('Who are you looking for? ');
+answer = answer.toLowerCase();
+
+
+for (var i = 0; i < students.length; i += 1) {
+  var student = students[i];
+  var name = student.name;
+  var track = student.track;
+  var achievements = student.achievements;
+  var points = student.points;
+
+
+  
+  if (answer === student.name.toLowerCase())
+  {
+    message += '<h2>Student: ' + student.name + '</h2>';  
+    message += '<p>Track: ' + student.track + '</p>';
+    message += '<p>Points: ' + student.points + '</p>';
+    message += '<p>Achievements: ' + student.achievements + '</p>';
+  }
+  else if (answer !== student.name.toLowerCase() || answer === NULL){
+   message += '<p> Sorry this person is not in our records</p>' 
+  }
+  
+  print(message);
+  break;
+}
+
+
+
+
