@@ -1,0 +1,89 @@
+//list of pets
+
+const ernie = {
+    animal: 'dog',
+    age: '1',
+    breed: 'pug',
+    bark: function(){
+        console.log('Woof!');
+    }
+}
+
+const vera = {
+    animal: 'dog',
+    age: '8',
+    breed: 'pug',
+    bark: function(){
+        console.log('Woof!');
+    }
+}
+
+
+const scofield = {
+    animal: 'dog',
+    age: '6',
+    breed: 'pug',
+    bark: function(){
+        console.log('Woof!');
+    }
+}
+
+
+const ernie = {
+    animal: 'dog',
+    age: '1',
+    breed: 'pug',
+    bark: function(){
+        console.log('Woof!');
+    }
+}
+
+//end olist
+
+
+
+
+//create a Pet Class to create a pet
+class Pet {
+ 
+ //this is the constructor of variable
+ 
+ constructor (animal, age, breed, sound){
+   this.animal = animal;
+   this.age = age;
+   this.bread = breed;
+   this.sound = sound;
+   
+ }
+  
+//  this a get method 
+
+  get activity(){
+    const today = new Date();
+    const hour  = today.getHours();
+    if (hour > 8 && hour <=20) {
+    return 'playing';
+    }
+else {
+  return 'sleeping';
+  
+    }
+  
+} 
+  
+  speak() {
+  console.log(this.sound);
+  
+}
+  
+}
+
+//End of class
+
+//create a pet object
+
+const ernie = new Pet('dog', 1, 'pug', 'yip yip');
+const vera = new Pet('dog', 8, 'pug', 'woof woof');
+
+console.log(ernie);
+
