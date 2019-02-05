@@ -1,0 +1,82 @@
+class Pet {
+ 
+  //Create a Pet and its properties
+ constructor (animal, age, breed, sound){
+   this.animal = animal;
+   this.age = age;
+   this.bread = breed;
+   this.sound = sound;
+   
+ }
+  
+  //get the activity that the dog will be doing
+  get activity(){
+    const today = new Date();
+    const hour  = today.getHours();
+    if (hour > 8 && hour <=20) {
+    return 'playing';
+    }
+else {
+  return 'sleeping';
+  
+    }
+    
+  }
+  //end method
+  
+  
+ //accesing the this._owner property and return it
+  get owner (){
+  return this._owner;
+  }
+  
+  
+//accepts one paremter owner and set the owner of the pet name
+
+  set owner (owner){
+    this._owner = owner; // backing property
+    console.log('setter called: ' + this._owner); // to show the setter has been called
+  
+} 
+
+  speak() {
+  console.log(this.sound);
+  
+}
+  
+}
+//end of pet class
+
+
+//Start of Owner Class
+class Owner{
+  
+  constructor (name, address)
+  {
+   this.name = name;
+   this.address = address;
+
+  }
+ 
+  set ownerNumber(phoneNumber){
+     const phoneNormalized = phoneNumber.replace(/[^0-9]/g, '');
+     this._phoneNumber = phoneNormalized;
+}
+  
+     get ownerNumber(){
+      return this._phoneNumber; 
+   }
+  
+ 
+  
+  
+}
+
+const ernie = new Pet('dog', 1, 'pug', 'yip yip');
+const vera = new Pet('dog', 8, 'pug', 'woof woof');
+
+ernie.owner = new Owner('Stephen', 'BD1810XB');
+ernie.owner.ownerNumber ='0235123362';
+console.log(ernie.owner.name);
+console.log(ernie.owner.ownerNumber);
+console.log(ernie);
